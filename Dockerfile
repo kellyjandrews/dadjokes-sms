@@ -14,7 +14,8 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ['npm', 'start']
+CMD ["npm", "start"]
+
 # FROM node:11.8.0-alpine as build-stage
 #
 # WORKDIR /usr/src
