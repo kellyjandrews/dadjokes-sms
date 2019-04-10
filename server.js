@@ -7,8 +7,8 @@ const app = express();
 const port = 3000;
 
 const nexmo = new Nexmo({
-    apiKey: 'NEXMO_KEY',
-    apiSecret: '61XuKoPBEX6WGrhI'
+    apiKey: process.env.NEXMO_KEY,
+    apiSecret: process.env.NEXMO_SECRET
   });
 
 app.use(bodyParser.json());
