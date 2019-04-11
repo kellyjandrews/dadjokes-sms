@@ -4,7 +4,7 @@ const request = require('superagent');
 const Nexmo = require('nexmo');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const nexmo = new Nexmo({
     apiKey: process.env.NEXMO_KEY,
@@ -12,10 +12,6 @@ const nexmo = new Nexmo({
   });
 
 app.use(bodyParser.json());
-
-app.get('/up', (req, res) => {
-  res.sendStatus(200);
-});
 
 app.post('/sms', (req, res) => {
   let message;
