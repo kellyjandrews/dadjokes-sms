@@ -4,7 +4,7 @@ const request = require('superagent');
 const Nexmo = require('nexmo');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const nexmo = new Nexmo({
     apiKey: process.env.NEXMO_KEY,
